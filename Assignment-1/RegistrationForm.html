@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body { font-family: Calibri, sans-serif; background-color: #f4f4f4; }
+    .form-container {
+        background-color: #1ec849;
+        color: white;
+        padding: 20px;
+        width: 600px;
+        margin: auto;
+        border: 1px solid #ccc;
+    }
+    h2 { text-align: center; text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; }
+    td { padding: 8px; vertical-align: top; }
+    input[type="text"], textarea { width: 100%; box-sizing: border-box; }
+    .qual-table { background: white; color: black; border: 1px solid black; text-align: center; }
+    .qual-table th, .qual-table td { border: 1px solid black; font-size: 12px; }
+    .hint { font-size: 0.8em; color: #e0e0e0; }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>STUDENT REGISTRATION FORM</h2>
+    <form>
+        <table>
+            <tr>
+                <td>FIRST NAME</td>
+                <td><input type="text"> <span class="hint">(max 30 characters a-z and A-Z)</span></td>
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <td><input type="text"> <span class="hint">(max 30 characters a-z and A-Z)</span></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH</td>
+                <td>
+                    Day: <select><option>1</option></select>
+                    Month: <select><option>Jan</option></select>
+                    Year: <select><option>2000</option></select>
+                </td>
+            </tr>
+            <tr>
+                <td>EMAIL ID</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>MOBILE NUMBER</td>
+                <td><input type="text"> <span class="hint">(10 digit number)</span></td>
+            </tr>
+            <tr>
+                <td>GENDER</td>
+                <td>
+                    Male <input type="radio" name="gen"> 
+                    Female <input type="radio" name="gen">
+                </td>
+            </tr>
+            <tr>
+                <td>ADDRESS</td>
+                <td><textarea rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>CITY</td>
+                <td><input type="text"> <span class="hint">(max 30 characters)</span></td>
+            </tr>
+            <tr>
+                <td>QUALIFICATION</td>
+                <td>
+                    <table class="qual-table">
+                        <tr>
+                            <th>Sl.No.</th><th>Examination</th><th>Board</th><th>Percentage</th><th>Year</th>
+                        </tr>
+                        <tr><td>1</td><td>Class X</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        <tr><td>2</td><td>Class XII</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        <tr><td>2</td><td>Graduation</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                        <tr><td>2</td><td>Master</td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <input type="submit" value="Submit"> <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
