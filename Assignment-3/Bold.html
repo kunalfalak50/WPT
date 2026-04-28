@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Highlight Bold Words</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        a {
+            color: blue;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Highlight Bold Words</h2>
+
+    <p>
+        <a onmouseover="highlightWords()" onmouseout="removeHighlight()">
+            Hover over this link
+        </a>
+    </p>
+
+    <p id="text">
+        We have just started this section for the users 
+        <b>(Beginner to intermediate)</b> who want to work with 
+        various <b>JavaScript problems</b> and write scripts online 
+        to test their <b>JavaScript skill</b>.
+    </p>
+
+    <script>
+        function highlightWords() {
+            let boldWords = document.getElementById("text").getElementsByTagName("b");
+            
+            for (let i = 0; i < boldWords.length; i++) {
+                boldWords[i].classList.add("highlight");
+            }
+        }
+
+        function removeHighlight() {
+            let boldWords = document.getElementById("text").getElementsByTagName("b");
+            
+            for (let i = 0; i < boldWords.length; i++) {
+                boldWords[i].classList.remove("highlight");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Example</title>
+    <style>
+        #para {
+            font-size: 18px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>DOM Manipulation Example</h2>
+
+    <!-- Paragraph -->
+    <p id="para">
+        It is rightly said that being disciplined is essential in life. 
+        When a person leads a disciplined life, they set an easy path to success. 
+        They will develop an approach to happiness and a beautiful future ahead. 
+        Being disciplined is the practice of having a scheduled daily routine 
+        which helps an individual to be punctual and hard-working.
+    </p>
+
+    <!-- Button -->
+    <button onclick="changeStyle()">Submit</button>
+
+    <!-- JavaScript -->
+    <script>
+        function changeStyle() {
+            let p = document.getElementById("para");
+
+            // Change styles
+            p.style.color = "green";
+            p.style.fontSize = "22px";
+            p.style.fontWeight = "bold";
+            p.style.backgroundColor = "lightyellow";
+            p.style.padding = "10px";
+            p.style.border = "2px solid black";
+        }
+    </script>
+
+</body>
+</html>

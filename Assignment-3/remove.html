@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<select id="list">
+  <option>Apple</option>
+  <option>Banana</option>
+  <option>Mango</option>
+   <option>Grapes</option>
+</select>
+
+<br><br>
+
+<button onclick="removeItem()">Remove Selected Item</button>
+
+<script>
+function removeItem() {
+  var x = document.getElementById("list");
+  x.remove(x.selectedIndex);
+}
+</script>
+
+</body>
+</html>
