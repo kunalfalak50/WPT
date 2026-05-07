@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Data Simulation</title>
+</head>
+<body>
+
+  <h2>Check Console Output</h2>
+
+  <script>
+    function fetchData(url, callback) {
+      console.log(`Fetching data from: ${url}`);
+
+      // Simulate network delay
+      setTimeout(() => {
+        const response = `Response received from ${url}`;
+
+        // Call callback function
+        callback(response);
+      }, 2000);
+    }
+
+    // Callback function
+    function handleResponse(data) {
+      console.log(data);
+    }
+
+    // Function call
+    fetchData("https://api.example.com/data", handleResponse);
+  </script>
+
+</body>
+</html>

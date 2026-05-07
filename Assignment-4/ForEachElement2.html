@@ -1,0 +1,22 @@
+<html>
+    <head>
+     <title>Page</title>
+    </head>
+    <body>
+        <script>
+            function forEachElement(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i], i);
+    }
+}
+
+// Array
+let numbers = [1, 2, 3, 4, 5];
+
+// Calling function with anonymous callback
+forEachElement(numbers, function(element, index) {
+    console.log("Index:", index, "Result:", element * 2);
+});
+        </script>
+    </body>
+</html>

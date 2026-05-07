@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nested Callbacks Example</title>
+</head>
+<body>
+
+  <h2>Check Console Output</h2>
+
+  <script>
+    // Function to fetch data
+    function fetchData(url, callback) {
+      console.log(`Fetching data from: ${url}`);
+
+      setTimeout(() => {
+        const isError = false;
+
+        if (isError) {
+          callback("Error: Unable to fetch data", null);
+        } else {
+          const response = `Data received from ${url}`;
+          callback(null, response);
+        }
+      }, 2000);
+    }
+
+    // Function to process data
+    function processData(data, callback) {
+      console.log("Processing data...");
+
+      setTimeout(() => {
+        const processedData = data.toUpperCase();
+        callback(processedData);
+      }, 1000);
+    }
+
+    // Nested callbacks
+    fetchData("https://api.example.com/data", function(error, response) {
+
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Fetched Response:", response);
+
+        processData(response, function(result) {
+          console.log("Processed Result:", result);
+        });
+      }
+
+    });
+  </script>
+
+</body>
+</html>

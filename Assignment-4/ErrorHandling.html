@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Data with Error Handling</title>
+</head>
+<body>
+
+  <h2>Check Console Output</h2>
+
+  <script>
+    function fetchData(url, callback) {
+      console.log(`Fetching data from: ${url}`);
+
+      // Simulate network delay
+      setTimeout(() => {
+
+        // Simulate success or error
+        const isError = true;
+
+        if (isError) {
+          callback("Network Error: Unable to fetch data", null);
+        } else {
+          const response = `Response received from ${url}`;
+          callback(null, response);
+        }
+
+      }, 2000);
+    }
+
+    // Callback function
+    function handleResponse(error, data) {
+
+      if (error) {
+        console.log("Error:", error);
+      } else {
+        console.log(data);
+      }
+
+    }
+
+    // Function call
+    fetchData("https://api.example.com/data", handleResponse);
+  </script>
+
+</body>
+</html>

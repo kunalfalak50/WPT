@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+          Web Page
+        </title>
+    </head>
+    <body>
+        <script>
+            function toUpperCase(str){
+                return str.toUpperCase();
+            }
+            //main fuction
+
+            function processData(text, callback){
+                let result = callback(text);
+                console.log(result);
+            }
+            processData("hello world",toUpperCase);
+        </script>
+    </body>
+
+</html>
